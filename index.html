@@ -139,7 +139,7 @@
 
             <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[rgba(184,110,40,0.12)] border border-[rgba(184,110,40,0.35)] mb-6">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#b86e28] pulse-accent"></span>
-                <span class="text-xs sm:text-sm font-semibold text-[#b86e28] tracking-wider uppercase">Previsão Oficial: 10 de Agosto de 2026</span>
+                <span class="text-xs sm:text-sm font-semibold text-[#b86e28] tracking-wider uppercase">Previsão Oficial: 15 de Agosto de 2026</span>
             </div>
 
             <div class="bg-[#13151b] border border-[rgba(184,110,40,0.35)] rounded-3xl p-6 sm:p-10 shadow-2xl shadow-black/60 relative overflow-hidden group">
@@ -148,7 +148,7 @@
                 <span class="text-xs sm:text-sm font-bold text-[#9ab0c2] uppercase tracking-widest block mb-2">Faltam Exatamente</span>
                 
                 <div class="flex items-center justify-center space-x-2 my-2">
-                    <span id="days-counter" class="text-7xl sm:text-9xl font-black tracking-tight text-white transition-all duration-300">00</span>
+                    <span id="days-counter" class="text-7xl sm:text-9xl font-black tracking-tight text-white transition-all duration-300">05</span>
                 </div>
 
                 <div class="inline-block bg-[rgba(184,110,40,0.12)] border border-[rgba(184,110,40,0.35)] px-6 py-2 rounded-full mt-2">
@@ -158,7 +158,7 @@
                 <div class="mt-8 pt-6 border-t border-[rgba(255,255,255,0.08)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm text-[#9ab0c2]">
                     <div class="flex items-center space-x-2">
                         <i class="fa-regular fa-calendar-check text-[#b86e28]"></i>
-                        <span>Data do Lançamento: <strong class="text-white">10/08/2026</strong></span>
+                        <span>Data do Lançamento: <strong class="text-white">15/08/2026</strong></span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <i class="fa-solid fa-code-commit text-[#4ade80]"></i>
@@ -174,7 +174,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
             <div class="flex items-center space-x-2">
                 <i class="fa-solid fa-code text-[#b86e28] text-xs"></i>
-                <span class="text-xs text-[#9ab0c2]">© 2026 Todos os direitos reservados. Entrega prev. para <strong>10/08/2026</strong>.</span>
+                <span class="text-xs text-[#9ab0c2]">© 2026 Todos os direitos reservados. Entrega prev. para <strong>15/08/2026</strong>.</span>
             </div>
             <div class="text-xs text-[#9ab0c2] flex items-center space-x-2">
                 <span class="w-2 h-2 rounded-full bg-[#4ade80]"></span>
@@ -184,7 +184,7 @@
     </footer>
 
     <script>
-        const targetDate = new Date('2026-08-10T00:00:00');
+        const targetDate = new Date('2026-08-15T00:00:00');
 
         function calculateDaysRemaining() {
             const now = new Date();
@@ -204,7 +204,7 @@
             if (!daysElement) return;
 
             const remainingDays = calculateDaysRemaining();
-            const formattedDays = remainingDays < 10 && remainingDays >= 0 ? `0${remainingDays}` : remainingDays;
+            const formattedDays = remainingDays < 15 && remainingDays >= 0 ? `0${remainingDays}` : remainingDays;
             
             daysElement.innerText = formattedDays;
 
