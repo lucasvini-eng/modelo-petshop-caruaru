@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Spa | Petshop Caruaru - Link na Bio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            accent: '#22c55e', // Subtle bow-tie green accent
+                            black: '#000000',
+                            dark: '#111827',
+                            lightBg: '#fcfbfd'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Font for Brand Elegance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Custom smooth scrollbar & micro-animations */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f472b6;
+            border-radius: 9999px;
+        }
+        .pulse-ring-pink {
+            box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.5);
+            animation: pulseRingPink 2s infinite;
+        }
+        @keyframes pulseRingPink {
+            0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(236, 72, 153, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+        }
+        .pulse-ring-green {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+            animation: pulseRingGreen 2s infinite;
+        }
+        @keyframes pulseRingGreen {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        .brand-font {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-900 antialiased min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-900">
+
+    <div class="max-w-md mx-auto w-full px-4 py-6 space-y-6 pb-24">
+
+        <!-- HERO & BRANDING SECTION -->
+        <header class="bg-white rounded-3xl p-6 shadow-sm border border-stone-200/80 text-center relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-pink-100/60 rounded-full blur-xl pointer-events-none"></div>
+            <div class="absolute -bottom-12 -left-12 w-32 h-32 bg-stone-100 rounded-full blur-xl pointer-events-none"></div>
+
+            <div class="relative z-10 flex flex-col items-center">
+                <!-- ACCURATE BRAND LOGO SVG (Pet Spa Caruaru) -->
+                <div class="w-full max-w-[260px] bg-white p-3 rounded-2xl border border-stone-200 shadow-sm mb-4 flex items-center justify-center">
+                    <svg viewBox="0 0 340 180" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Top Swirl Flourishes (Pink) -->
+                        <path d="M 70 65 C 90 45, 110 75, 125 58 Q 130 52, 120 48 Q 105 50, 85 68" fill="none" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M 270 65 C 250 45, 230 75, 215 58 Q 210 52, 220 48 Q 235 50, 255 68" fill="none" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+
+                        <!-- Westie Dog Silhouette (Top Center) -->
+                        <g transform="translate(138, 12) scale(0.65)">
+                            <!-- Ears -->
+                            <path d="M 28 32 L 20 5 L 38 22 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M 68 32 L 76 5 L 58 22 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                            <!-- Head & Fluffy Jaw -->
+                            <path d="M 20 32 Q 10 40 15 55 Q 25 70 48 70 Q 71 70 81 55 Q 86 40 76 32 Q 48 24 20 32 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                            <!-- Tail -->
+                            <path d="M 85 50 Q 100 30 92 18 Q 85 25 80 42 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5"/>
+                            <!-- Body & Legs -->
+                            <path d="M 25 60 L 18 85 L 30 85 L 35 68 L 61 68 L 66 85 L 78 85 L 72 58 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                            <!-- Bowtie (Green Accent) -->
+                            <path d="M 38 60 L 48 64 L 58 60 L 58 68 L 48 64 L 38 68 Z" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+                            <circle cx="48" cy="64" r="3" fill="#15803d"/>
+                            <!-- Face Features -->
+                            <circle cx="36" cy="42" r="2.5" fill="#111827"/>
+                            <circle cx="60" cy="42" r="2.5" fill="#111827"/>
+                            <ellipse cx="48" cy="48" rx="4" ry="3" fill="#111827"/>
+                        </g>
+
+                        <!-- Outer Elegant Frame with Corner Loops -->
+                        <rect x="50" y="70" width="240" height="85" rx="4" fill="none" stroke="#111827" stroke-width="1.5"/>
+                        <!-- Corner loop details -->
+                        <circle cx="50" cy="70" r="3" fill="#ffffff" stroke="#111827" stroke-width="1.5"/>
+                        <circle cx="290" cy="70" r="3" fill="#ffffff" stroke="#111827" stroke-width="1.5"/>
+                        <circle cx="50" cy="155" r="3" fill="#ffffff" stroke="#111827" stroke-width="1.5"/>
+                        <circle cx="290" cy="155" r="3" fill="#ffffff" stroke="#111827" stroke-width="1.5"/>
+
+                        <!-- "Pet Spa" Serif Typography (Black & Bold) -->
+                        <text x="170" y="122" font-family="'Playfair Display', Georgia, serif" font-size="40" font-weight="700" fill="#000000" text-anchor="middle">Pet Spa</text>
+
+                        <!-- "Caruaru" Pill Badge (Black Background, White Text) -->
+                        <rect x="125" y="138" width="90" height="20" rx="4" fill="#000000"/>
+                        <text x="170" y="152" font-family="'Inter', sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#ffffff" text-anchor="middle">CARUARU</text>
+                    </svg>
+                </div>
+
+                <h1 class="text-xl font-bold text-black tracking-tight mb-1" id="hero-title">Pet Spa | Petshop</h1>
+
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 border border-pink-200 text-pink-700 text-xs font-semibold mb-3">
+                    <i data-lucide="heart" class="w-3.5 h-3.5 text-pink-500 fill-pink-500"></i>
+                    <span id="hero-slogan">Cuidando dos seus como se fossem nossos!</span>
+                </div>
+
+                <div class="inline-flex items-center gap-1 text-slate-600 text-xs mb-4">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-pink-600"></i>
+                    <span id="hero-address">Av. Dr. Pedro Jordão, 429 • Maurício de Nassau</span>
+                </div>
+
+                <p class="text-xs text-slate-600 mb-5 leading-relaxed max-w-xs">
+                    Tudo para cuidar do seu pet com carinho, higiene e segurança especializada.
+                </p>
+
+                <!-- Action CTAs -->
+                <div class="grid grid-cols-2 gap-2.5 w-full">
+                    <a href="#lead-funnel" onclick="scrollToFunnel()" class="flex items-center justify-center gap-2 bg-black hover:bg-slate-800 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm transition-all active:scale-95 text-xs">
+                        <i data-lucide="calendar" class="w-4 h-4 text-pink-400"></i>
+                        Agendar Agora
+                    </a>
+                    <a id="btn-hero-whatsapp" href="#" target="_blank" onclick="trackEvent('whatsapp_click', { source: 'hero' })" class="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm transition-all active:scale-95 text-xs">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- LEAD CAPTURE FUNNEL SECTION -->
+        <section id="lead-funnel" class="bg-white rounded-3xl p-5 shadow-sm border border-stone-200 scroll-mt-6">
+            <div class="border-b border-stone-100 pb-3 mb-4">
+                <span class="text-[10px] font-bold text-pink-700 uppercase tracking-wider bg-pink-50 border border-pink-100 px-2.5 py-1 rounded-md">Atendimento Rápido</span>
+                <h2 class="text-base font-bold text-black mt-2">Como podemos cuidar do seu pet hoje?</h2>
+                <p class="text-xs text-slate-500">Selecione o serviço para agendar ou pedir um orçamento.</p>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="mb-5">
+                <div class="flex justify-between items-center text-[11px] font-medium text-slate-500 mb-1.5">
+                    <span id="funnel-step-label">Etapa 1 de 4: Escolha o serviço</span>
+                    <span id="funnel-step-percent" class="text-pink-600 font-bold">25%</span>
+                </div>
+                <div class="w-full bg-stone-100 h-2 rounded-full overflow-hidden">
+                    <div id="funnel-progress-bar" class="bg-pink-500 h-full w-1/4 transition-all duration-300 ease-out"></div>
+                </div>
+            </div>
+
+            <!-- FUNNEL FORM CONTAINER -->
+            <form id="funnel-form" onsubmit="event.preventDefault();">
+
+                <!-- STEP 1: SERVICE SELECTION -->
+                <div id="step-1" class="funnel-step space-y-3">
+                    <p class="text-xs font-semibold text-slate-800">Selecione o serviço desejado:</p>
+                    <div id="funnel-services-grid" class="grid grid-cols-2 gap-2.5">
+                        <!-- Dynamically populated from JS 'servicos' -->
+                    </div>
+                </div>
+
+                <!-- STEP 2: TUTOR & PET DETAILS -->
+                <div id="step-2" class="funnel-step hidden space-y-3">
+                    <h3 class="text-xs font-bold text-black border-b pb-2 flex items-center gap-1.5">
+                        <i data-lucide="user" class="w-4 h-4 text-pink-500"></i> Seus dados e do Pet
+                    </h3>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 mb-1">Nome do Pet *</label>
+                        <input type="text" id="input-pet-name" required placeholder="Ex: Thor, Mel, Nina..." class="w-full text-xs px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none transition-all">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 mb-1">Tipo de Pet</label>
+                            <select id="input-pet-type" class="w-full text-xs px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none bg-white">
+                                <option value="Cão">🐶 Cão</option>
+                                <option value="Gato">🐱 Gato</option>
+                                <option value="Outro">🐾 Outro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 mb-1">Porte / Raça</label>
+                            <input type="text" id="input-pet-breed" placeholder="Ex: Shih Tzu, Vira-Lata..." class="w-full text-xs px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 mb-1">Seu Nome (Tutor) *</label>
+                        <input type="text" id="input-tutor-name" required placeholder="Seu nome completo" class="w-full text-xs px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 mb-1">Seu WhatsApp *</label>
+                        <input type="tel" id="input-tutor-phone" required placeholder="(81) 99999-9999" class="w-full text-xs px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- STEP 3: DETAILS & FILE ATTACHMENT -->
+                <div id="step-3" class="funnel-step hidden space-y-4">
+                    <h3 class="text-xs font-bold text-black border-b pb-2 flex items-center gap-1.5">
+                        <i data-lucide="paperclip" class="w-4 h-4 text-pink-500"></i> Observações & Documentos
+                    </h3>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-700 mb-1">Observações ou Preferência de Data</label>
+                        <textarea id="input-notes" rows="2" placeholder="Ex: Preferência para sábado à tarde, possui alergia..." class="w-full text-xs px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:outline-none resize-none"></textarea>
+                    </div>
+
+                    <!-- REUSABLE ATTACHMENT COMPONENT -->
+                    <div id="attachment-container" class="bg-pink-50/40 border-2 border-dashed border-pink-200 rounded-2xl p-4 text-center transition-all hover:border-pink-500">
+                        <input type="file" id="file-input" class="hidden" accept=".jpg,.jpeg,.png,.webp,.pdf">
+
+                        <div id="upload-idle-state" class="space-y-2">
+                            <div class="w-10 h-10 bg-white text-pink-600 rounded-full shadow-sm flex items-center justify-center mx-auto border border-pink-100">
+                                <i data-lucide="upload-cloud" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-xs text-slate-800 font-bold">Quer enviar uma foto ou documento?</div>
+                            <p class="text-[11px] text-slate-500 max-w-xs mx-auto">
+                                Envie foto do pet, carteira de vacinação, receita ou documento útil.
+                            </p>
+                            <p class="text-[10px] text-slate-400">JPG, PNG, WEBP ou PDF (Até 5MB)</p>
+                            <button type="button" onclick="document.getElementById('file-input').click()" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-800 font-semibold px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm hover:bg-stone-50 transition-all">
+                                <i data-lucide="folder" class="w-3.5 h-3.5 text-pink-500"></i> Escolher Arquivo
+                            </button>
+                        </div>
+
+                        <!-- Uploaded Preview State -->
+                        <div id="upload-preview-state" class="hidden text-left bg-white p-3 rounded-xl border border-pink-200 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2 overflow-hidden">
+                                    <div id="file-icon-box" class="w-8 h-8 rounded-lg bg-pink-100 text-pink-700 flex items-center justify-center shrink-0">
+                                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                                    </div>
+                                    <div class="truncate">
+                                        <div id="file-name" class="text-xs font-semibold text-slate-800 truncate">foto.jpg</div>
+                                        <div id="file-size" class="text-[10px] text-slate-400">1.2 MB</div>
+                                    </div>
+                                </div>
+                                <button type="button" onclick="removeAttachment()" class="text-rose-500 hover:bg-rose-50 p-1.5 rounded-lg transition-all" title="Remover arquivo">
+                                    <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-medium bg-emerald-50 px-2 py-1 rounded-md">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Arquivo anexado com sucesso.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 4: CONFIRMATION & SUMMARY -->
+                <div id="step-4" class="funnel-step hidden space-y-4">
+                    <div class="bg-stone-900 text-white rounded-2xl p-4 text-xs space-y-2.5">
+                        <h4 class="font-bold text-pink-400 text-sm flex items-center gap-1.5 border-b border-slate-800 pb-2">
+                            <i data-lucide="check-check" class="w-4 h-4 text-pink-400"></i> Resumo do Agendamento
+                        </h4>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Serviço:</span>
+                            <span id="summary-service" class="font-bold text-white">--</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">Pet / Tutor:</span>
+                            <span id="summary-names" class="font-bold text-white">--</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-800">
+                            <span class="text-slate-400">WhatsApp:</span>
+                            <span id="summary-phone" class="font-bold text-white">--</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-slate-400">Anexo:</span>
+                            <span id="summary-attachment" class="font-semibold text-pink-300">Nenhum</span>
+                        </div>
+                    </div>
+
+                    <!-- Privacy & LGPD Consent -->
+                    <div class="flex items-start gap-2 pt-1">
+                        <input type="checkbox" id="privacy-consent" required checked class="mt-0.5 rounded text-pink-600 focus:ring-pink-500">
+                        <label for="privacy-consent" class="text-[11px] text-slate-500 leading-tight">
+                            Seus dados serão utilizados exclusivamente para atendimento e agendamento, conforme nossa política de privacidade.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- FUNNEL NAVIGATION BUTTONS -->
+                <div class="flex items-center gap-2 pt-3 border-t border-slate-100 mt-4">
+                    <button type="button" id="btn-funnel-prev" onclick="navigateFunnel(-1)" class="hidden flex-1 py-2.5 px-3 bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-semibold rounded-xl transition-all">
+                        Voltar
+                    </button>
+                    <button type="button" id="btn-funnel-next" onclick="navigateFunnel(1)" class="flex-1 py-2.5 px-3 bg-pink-600 hover:bg-pink-700 text-white text-xs font-semibold rounded-xl shadow-sm transition-all flex items-center justify-center gap-1">
+                        <span>Avançar</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                    <button type="button" id="btn-funnel-submit" onclick="submitFunnelToWhatsApp()" class="hidden flex-1 py-2.5 px-3 bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-1.5 pulse-ring-green">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Enviar no WhatsApp</span>
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- MAIN LINKS SECTION -->
+        <section class="space-y-2.5">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Links Rápidos</h3>
+
+            <a id="link-whatsapp-direct" href="#" target="_blank" onclick="trackEvent('whatsapp_click', { source: 'quick_links' })" class="flex items-center justify-between bg-white p-3.5 rounded-2xl border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-all border border-emerald-100">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-black">Conversar no WhatsApp</div>
+                        <div class="text-[11px] text-slate-500">Tire dúvidas e fale com a recepção</div>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-emerald-500 group-hover:translate-x-0.5 transition-all"></i>
+            </a>
+
+            <a href="#visual-services" class="flex items-center justify-between bg-white p-3.5 rounded-2xl border border-slate-200 hover:border-pink-400 hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center group-hover:bg-pink-500 group-hover:text-white transition-all border border-pink-100">
+                        <i data-lucide="scissors" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-black">Catálogo de Serviços</div>
+                        <div class="text-[11px] text-slate-500">Conheça todos os cuidados oferecidos</div>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-pink-500 group-hover:translate-x-0.5 transition-all"></i>
+            </a>
+
+            <a id="link-instagram" href="#" target="_blank" onclick="trackEvent('instagram_click')" class="flex items-center justify-between bg-white p-3.5 rounded-2xl border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center group-hover:bg-purple-500 group-hover:text-white transition-all border border-purple-100">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-black">Instagram Oficial</div>
+                        <div class="text-[11px] text-slate-500">Acompanhe nossos bastidores e fotos</div>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-purple-500 group-hover:translate-x-0.5 transition-all"></i>
+            </a>
+
+            <a id="link-maps" href="#" target="_blank" onclick="trackEvent('maps_click')" class="flex items-center justify-between bg-white p-3.5 rounded-2xl border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white transition-all border border-sky-100">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-black">Como Chegar (Google Maps)</div>
+                        <div class="text-[11px] text-slate-500">Maurício de Nassau • Caruaru</div>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-sky-500 group-hover:translate-x-0.5 transition-all"></i>
+            </a>
+        </section>
+
+        <!-- SERVICES VISUAL GRID -->
+        <section id="visual-services" class="space-y-3 pt-2">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-sm font-bold text-black">Nossos Serviços</h3>
+                    <p class="text-[11px] text-slate-500">Clique para selecionar e agendar diretamente</p>
+                </div>
+                <span class="text-[10px] font-bold bg-pink-100 text-pink-700 px-2.5 py-0.5 rounded-full" id="service-count-badge">8 serviços</span>
+            </div>
+
+            <!-- Dynamic Cards Container -->
+            <div id="visual-services-container" class="grid grid-cols-1 gap-2.5">
+                <!-- Dynamically populated from JavaScript -->
+            </div>
+        </section>
+
+        <!-- DIFFERENTIALS SECTION -->
+        <section class="bg-white rounded-3xl p-5 border border-stone-200 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-pink-600">Por que escolher o Pet Spa?</h3>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="p-3 bg-pink-50/40 rounded-2xl border border-pink-100/80">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-pink-500 mb-1.5"></i>
+                    <div class="text-xs font-bold text-black">Atendimento VIP</div>
+                    <div class="text-[10px] text-slate-500 mt-0.5">Carinho individual e sem estresse para seu pet.</div>
+                </div>
+                <div class="p-3 bg-amber-50/40 rounded-2xl border border-amber-100/80">
+                    <i data-lucide="award" class="w-5 h-5 text-amber-500 mb-1.5"></i>
+                    <div class="text-xs font-bold text-black">Especialistas</div>
+                    <div class="text-[10px] text-slate-500 mt-0.5">Profissionais qualificados em estética e saúde.</div>
+                </div>
+                <div class="p-3 bg-emerald-50/40 rounded-2xl border border-emerald-100/80">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500 mb-1.5"></i>
+                    <div class="text-xs font-bold text-black">Cuidado & Segurança</div>
+                    <div class="text-[10px] text-slate-500 mt-0.5">Produtos hipoalergênicos e ambiente seguro.</div>
+                </div>
+                <div class="p-3 bg-sky-50/40 rounded-2xl border border-sky-100/80">
+                    <i data-lucide="clock" class="w-5 h-5 text-sky-500 mb-1.5"></i>
+                    <div class="text-xs font-bold text-black">Agendamento Fácil</div>
+                    <div class="text-[10px] text-slate-500 mt-0.5">Marque pelo WhatsApp sem complicação.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL PROOF / TESTIMONIALS -->
+        <section class="space-y-3">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">O que dizem os tutores</h3>
+                <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                    <span class="text-slate-800">4.9 / 5.0</span>
+                </div>
+            </div>
+
+            <div class="space-y-2.5">
+                <div class="bg-white p-3.5 rounded-2xl border border-stone-200 text-xs space-y-1.5 shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-black">Mariana Silva</span>
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-[11px] italic">
+                        "O melhor banho e tosa de Caruaru! O Thor sempre volta muito cheiroso e calminho. A equipe é hiper atenciosa."
+                    </p>
+                </div>
+
+                <div class="bg-white p-3.5 rounded-2xl border border-stone-200 text-xs space-y-1.5 shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-black">Carlos Eduardo</span>
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-[11px] italic">
+                        "Atendimento nota 10. Agendei a vacinação da minha gatinha pelo WhatsApp e fomos atendidos super rápido no horário."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCATION & HOURS SECTION -->
+        <section class="bg-white rounded-3xl p-5 border border-stone-200 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Localização e Horários</h3>
+
+            <div class="space-y-2.5 text-xs text-slate-700">
+                <div class="flex items-start gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-pink-50 text-pink-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-black" id="info-address">Av. Dr. Pedro Jordão, 429</div>
+                        <div class="text-[11px] text-slate-500">Maurício de Nassau • Caruaru - PE</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                    </div>
+                    <span id="info-hours" class="text-[11px] text-slate-700 font-medium">Terça a Sábado: 08:00h às 18:00h</span>
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    </div>
+                    <span id="info-phone" class="text-[11px] text-slate-700 font-medium">(81) 98266-0429</span>
+                </div>
+            </div>
+
+            <a id="btn-maps-action" href="#" target="_blank" onclick="trackEvent('maps_click')" class="block w-full py-2.5 text-center bg-black hover:bg-slate-800 text-white font-semibold rounded-xl text-xs shadow-sm transition-all">
+                Abrir Rota no Google Maps
+            </a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-[10px] text-slate-400 space-y-1 pt-2">
+            <div>© <span id="current-year"></span> Pet Spa | Petshop Caruaru</div>
+            <div>Alta conversão para Instagram & WhatsApp</div>
+        </footer>
+
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a id="floating-whatsapp" href="#" target="_blank" onclick="trackEvent('whatsapp_click', { source: 'floating_fab' })" class="fixed bottom-5 right-5 z-50 bg-emerald-500 text-white p-3.5 rounded-full shadow-lg hover:bg-emerald-600 transition-all hover:scale-105 active:scale-95 flex items-center justify-center pulse-ring-green">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-pink-500 rounded-full border-2 border-white"></span>
+    </a>
+
+    <!-- TOAST NOTIFICATION BOX -->
+    <div id="toast-container" class="fixed top-4 right-4 left-4 max-w-sm mx-auto z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-2">
+        <div id="toast-content" class="bg-black text-white text-xs py-2.5 px-4 rounded-xl shadow-xl flex items-center gap-2">
+            <i data-lucide="info" id="toast-icon" class="w-4 h-4 text-pink-400"></i>
+            <span id="toast-message">Notificação</span>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & DATA ENGINE -->
+    <script>
+        // CENTRAL CONFIGURATION OBJECT
+        const config = {
+            nomePetshop: "Pet Spa | Petshop Caruaru",
+            slogan: "Cuidando dos seus como se fossem nossos!",
+            whatsapp: "5581982660429", // Format: CountryCode + DDD + Number
+            whatsappFormatted: "(81) 98266-0429",
+            telefone: "(81) 98266-0429",
+            instagram: "https://www.instagram.com/",
+            endereco: "Av. Dr. Pedro Jordão, 429 - Maurício de Nassau",
+            cidadeEstado: "Caruaru - PE",
+            googleMaps: "https://maps.google.com/?q=Av.+Dr.+Pedro+Jord%C3%A3o,+429+-+Maur%C3%ADcio+de+Nassau,+Caruaru+-+PE",
+            horarios: "Terça a Sábado: 08:00h às 18:00h"
+        };
+
+        // CENTRAL SERVICES ARRAY WITH COLORED ICON ACCENTS
+        const servicos = [
+            {
+                id: "banho-tosa",
+                nome: "Banho e Tosa",
+                descricao: "Higiene completa, tosa higiênica ou de raça com produtos premium.",
+                icone: "scissors",
+                colorBg: "bg-pink-50",
+                colorText: "text-pink-600",
+                borderColor: "border-pink-200",
+                categoria: "higiene",
+                permiteAnexo: true,
+                dicaAnexo: "Você pode enviar uma foto do pet para referência da tosa!"
+            },
+            {
+                id: "consulta",
+                nome: "Consulta Veterinária",
+                descricao: "Avaliação clínica completa com médicos veterinários dedicados.",
+                icone: "stethoscope",
+                colorBg: "bg-rose-50",
+                colorText: "text-rose-600",
+                borderColor: "border-rose-200",
+                categoria: "veterinario",
+                permiteAnexo: true,
+                dicaAnexo: "Envie exames anteriores ou receitas se possuir."
+            },
+            {
+                id: "vacinacao",
+                nome: "Vacinação",
+                descricao: "Vacinas importadas para manter a imunidade do pet em dia.",
+                icone: "syringe",
+                colorBg: "bg-purple-50",
+                colorText: "text-purple-600",
+                borderColor: "border-purple-200",
+                categoria: "veterinario",
+                permiteAnexo: true,
+                dicaAnexo: "Envie foto da carteira de vacinação atual."
+            },
+            {
+                id: "hospedagem",
+                nome: "Hospedagem & Creche",
+                descricao: "Ambiente seguro e divertido para passar o dia ou se hospedar.",
+                icone: "home",
+                colorBg: "bg-amber-50",
+                colorText: "text-amber-600",
+                borderColor: "border-amber-200",
+                categoria: "outros",
+                permiteAnexo: false,
+                dicaAnexo: ""
+            },
+            {
+                id: "taxi-pet",
+                nome: "Táxi Pet",
+                descricao: "Buscamos e levamos seu pet com conforto e total segurança.",
+                icone: "car",
+                colorBg: "bg-sky-50",
+                colorText: "text-sky-600",
+                borderColor: "border-sky-200",
+                categoria: "outros",
+                permiteAnexo: false,
+                dicaAnexo: ""
+            },
+            {
+                id: "adestramento",
+                nome: "Adestramento",
+                descricao: "Educação positiva e correção de comportamento no Pet Spa.",
+                icone: "award",
+                colorBg: "bg-indigo-50",
+                colorText: "text-indigo-600",
+                borderColor: "border-indigo-200",
+                categoria: "outros",
+                permiteAnexo: false,
+                dicaAnexo: ""
+            },
+            {
+                id: "produtos",
+                nome: "Produtos & Farmácia",
+                descricao: "Rações, petiscos, medicamentos e acessórios selecionados.",
+                icone: "shopping-bag",
+                colorBg: "bg-emerald-50",
+                colorText: "text-emerald-600",
+                borderColor: "border-emerald-200",
+                categoria: "outros",
+                permiteAnexo: true,
+                dicaAnexo: "Envie foto da receita médica ou produto desejado."
+            },
+            {
+                id: "outro",
+                nome: "Outros Serviços",
+                descricao: "Atendimento personalizado para necessidades específicas.",
+                icone: "help-circle",
+                colorBg: "bg-stone-100",
+                colorText: "text-slate-700",
+                borderColor: "border-slate-200",
+                categoria: "outros",
+                permiteAnexo: true,
+                dicaAnexo: "Envie fotos ou documentos que ajudem nossa equipe."
+            }
+        ];
+
+        // APPLICATION STATE
+        let funnelState = {
+            currentStep: 1,
+            selectedServiceId: servicos[0].id,
+            petName: "",
+            petType: "Cão",
+            petBreed: "",
+            tutorName: "",
+            tutorPhone: "",
+            notes: "",
+            attachedFile: null
+        };
+
+        // ON DOM LOAD INITIALIZATION
+        window.addEventListener('DOMContentLoaded', () => {
+            initializeDynamicData();
+            renderFunnelServices();
+            renderVisualServices();
+            setupFileUploadHandlers();
+            lucide.createIcons();
+
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+
+        // POPULATE UI FROM CONFIG OBJECT
+        function initializeDynamicData() {
+            document.getElementById('hero-slogan').textContent = config.slogan;
+            document.getElementById('hero-address').textContent = `${config.endereco}`;
+            document.getElementById('info-address').textContent = config.endereco;
+            document.getElementById('info-hours').textContent = config.horarios;
+            document.getElementById('info-phone').textContent = config.telefone;
+
+            const waDefaultLink = gerarLinkWhatsApp("Olá! Vim pelo Instagram e gostaria de informações sobre os serviços do Pet Spa.");
+            document.getElementById('btn-hero-whatsapp').href = waDefaultLink;
+            document.getElementById('link-whatsapp-direct').href = waDefaultLink;
+            document.getElementById('floating-whatsapp').href = waDefaultLink;
+
+            document.getElementById('link-instagram').href = config.instagram;
+            document.getElementById('link-maps').href = config.googleMaps;
+            document.getElementById('btn-maps-action').href = config.googleMaps;
+        }
+
+        // RENDER STEP 1 FUNNEL SERVICES GRID WITH COLORED ACCENTS
+        function renderFunnelServices() {
+            const container = document.getElementById('funnel-services-grid');
+            container.innerHTML = servicos.map(servico => `
+                <div onclick="selectFunnelService('${servico.id}')"
+                     id="funnel-card-${servico.id}"
+                     class="funnel-service-card p-3 rounded-2xl border text-left cursor-pointer transition-all flex flex-col justify-between ${funnelState.selectedServiceId === servico.id ? 'border-pink-500 bg-pink-50/60 ring-2 ring-pink-500/20' : 'border-slate-200 hover:border-pink-300 bg-white'}">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-7 h-7 rounded-lg ${servico.colorBg} ${servico.colorText} flex items-center justify-center shrink-0 border ${servico.borderColor}">
+                            <i data-lucide="${servico.icone}" class="w-4 h-4"></i>
+                        </div>
+                        <div class="font-bold text-xs text-black leading-tight">${servico.nome}</div>
+                    </div>
+                    <p class="text-[10px] text-slate-500 line-clamp-2">${servico.descricao}</p>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        // RENDER VISUAL SERVICES CATALOGUE SECTION
+        function renderVisualServices() {
+            const container = document.getElementById('visual-services-container');
+            document.getElementById('service-count-badge').textContent = `${servicos.length} opções`;
+
+            container.innerHTML = servicos.map(servico => `
+                <div onclick="selectServiceAndScroll('${servico.id}')" class="bg-white p-3.5 rounded-2xl border border-slate-200 hover:border-pink-400 hover:shadow-sm transition-all cursor-pointer flex items-center justify-between group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl ${servico.colorBg} ${servico.colorText} flex items-center justify-center border ${servico.borderColor} group-hover:bg-black group-hover:text-white transition-all shrink-0">
+                            <i data-lucide="${servico.icone}" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold text-black">${servico.nome}</div>
+                            <div class="text-[11px] text-slate-500 line-clamp-1">${servico.descricao}</div>
+                        </div>
+                    </div>
+                    <span class="text-[11px] font-bold text-pink-600 group-hover:underline shrink-0 ml-2">Agendar</span>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        // SELECT SERVICE IN FUNNEL
+        function selectFunnelService(id) {
+            funnelState.selectedServiceId = id;
+
+            // Update CSS active state
+            servicos.forEach(s => {
+                const el = document.getElementById(`funnel-card-${s.id}`);
+                if (el) {
+                    if (s.id === id) {
+                        el.className = 'funnel-service-card p-3 rounded-2xl border text-left cursor-pointer transition-all flex flex-col justify-between border-pink-500 bg-pink-50/60 ring-2 ring-pink-500/20';
+                    } else {
+                        el.className = 'funnel-service-card p-3 rounded-2xl border text-left cursor-pointer transition-all flex flex-col justify-between border-slate-200 hover:border-pink-300 bg-white';
+                    }
+                }
+            });
+
+            trackEvent('service_select', { serviceId: id });
+        }
+
+        // SELECT FROM VISUAL LIST AND SCROLL TO FUNNEL STEP 2
+        function selectServiceAndScroll(id) {
+            selectFunnelService(id);
+            scrollToFunnel();
+            navigateFunnel(1); // Jump to step 2 directly
+            showToast(`Serviço "${getServiceById(id).nome}" selecionado!`);
+        }
+
+        function scrollToFunnel() {
+            document.getElementById('lead-funnel').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function getServiceById(id) {
+            return servicos.find(s => s.id === id) || servicos[0];
+        }
+
+        // NAVIGATE FUNNEL STEPS
+        function navigateFunnel(direction) {
+            const nextStep = funnelState.currentStep + direction;
+
+            // Step 2 validation before advancing to 3
+            if (funnelState.currentStep === 2 && direction === 1) {
+                const petName = document.getElementById('input-pet-name').value.trim();
+                const tutorName = document.getElementById('input-tutor-name').value.trim();
+                const tutorPhone = document.getElementById('input-tutor-phone').value.trim();
+
+                if (!petName || !tutorName || !tutorPhone) {
+                    showToast('Por favor, preencha o nome do pet, seu nome e seu WhatsApp.', 'warning');
+                    return;
+                }
+
+                funnelState.petName = petName;
+                funnelState.petType = document.getElementById('input-pet-type').value;
+                funnelState.petBreed = document.getElementById('input-pet-breed').value.trim();
+                funnelState.tutorName = tutorName;
+                funnelState.tutorPhone = tutorPhone;
+            }
+
+            // Step 3 saving
+            if (funnelState.currentStep === 3 && direction === 1) {
+                funnelState.notes = document.getElementById('input-notes').value.trim();
+                updateSummary();
+            }
+
+            if (nextStep >= 1 && nextStep <= 4) {
+                document.getElementById(`step-${funnelState.currentStep}`).classList.add('hidden');
+                document.getElementById(`step-${nextStep}`).classList.remove('hidden');
+
+                funnelState.currentStep = nextStep;
+                updateProgressBar();
+                updateFunnelNavButtons();
+            }
+        }
+
+        function updateProgressBar() {
+            const percent = (funnelState.currentStep / 4) * 100;
+            document.getElementById('funnel-progress-bar').style.width = `${percent}%`;
+            document.getElementById('funnel-step-percent').textContent = `${percent}%`;
+
+            const stepTitles = [
+                'Etapa 1 de 4: Escolha o serviço',
+                'Etapa 2 de 4: Seus dados e do Pet',
+                'Etapa 3 de 4: Observações e Anexo',
+                'Etapa 4 de 4: Confirmar e Enviar'
+            ];
+            document.getElementById('funnel-step-label').textContent = stepTitles[funnelState.currentStep - 1];
+        }
+
+        function updateFunnelNavButtons() {
+            const btnPrev = document.getElementById('btn-funnel-prev');
+            const btnNext = document.getElementById('btn-funnel-next');
+            const btnSubmit = document.getElementById('btn-funnel-submit');
+
+            if (funnelState.currentStep === 1) {
+                btnPrev.classList.add('hidden');
+                btnNext.classList.remove('hidden');
+                btnSubmit.classList.add('hidden');
+            } else if (funnelState.currentStep === 4) {
+                btnPrev.classList.remove('hidden');
+                btnNext.classList.add('hidden');
+                btnSubmit.classList.remove('hidden');
+            } else {
+                btnPrev.classList.remove('hidden');
+                btnNext.classList.remove('hidden');
+                btnSubmit.classList.add('hidden');
+            }
+        }
+
+        function updateSummary() {
+            const servico = getServiceById(funnelState.selectedServiceId);
+            document.getElementById('summary-service').textContent = servico.nome;
+            document.getElementById('summary-names').textContent = `${funnelState.petName} (${funnelState.petType}) • Tutor: ${funnelState.tutorName}`;
+            document.getElementById('summary-phone').textContent = funnelState.tutorPhone;
+
+            if (funnelState.attachedFile) {
+                document.getElementById('summary-attachment').textContent = `Sim (${funnelState.attachedFile.name})`;
+                document.getElementById('summary-attachment').className = "font-bold text-pink-400";
+            } else {
+                document.getElementById('summary-attachment').textContent = "Nenhum arquivo enviado";
+                document.getElementById('summary-attachment').className = "font-medium text-slate-400";
+            }
+        }
+
+        // FILE UPLOAD AND DRAG & DROP LOGIC
+        function setupFileUploadHandlers() {
+            const container = document.getElementById('attachment-container');
+            const fileInput = document.getElementById('file-input');
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                container.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    container.classList.add('border-pink-500', 'bg-pink-100/50');
+                }, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                container.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    container.classList.remove('border-pink-500', 'bg-pink-100/50');
+                }, false);
+            });
+
+            container.addEventListener('drop', (e) => {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                if (files.length > 0) handleFileSelect(files[0]);
+            });
+
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) handleFileSelect(e.target.files[0]);
+            });
+        }
+
+        function handleFileSelect(file) {
+            const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'application/pdf'];
+            const maxSize = 5 * 1024 * 1024; // 5MB
+
+            if (!allowedTypes.includes(file.type)) {
+                showToast('Formato não permitido. Envie JPG, PNG, WEBP ou PDF.', 'warning');
+                return;
+            }
+
+            if (file.size > maxSize) {
+                showToast('O arquivo excede o tamanho máximo de 5MB.', 'warning');
+                return;
+            }
+
+            funnelState.attachedFile = file;
+
+            document.getElementById('upload-idle-state').classList.add('hidden');
+            document.getElementById('upload-preview-state').classList.remove('hidden');
+
+            document.getElementById('file-name').textContent = file.name;
+            document.getElementById('file-size').textContent = (file.size / (1024 * 1024)).toFixed(2) + ' MB';
+
+            trackEvent('file_upload', { fileName: file.name, fileSize: file.size });
+            showToast('Arquivo anexado com sucesso!');
+        }
+
+        function removeAttachment() {
+            funnelState.attachedFile = null;
+            document.getElementById('file-input').value = '';
+            document.getElementById('upload-idle-state').classList.remove('hidden');
+            document.getElementById('upload-preview-state').classList.add('hidden');
+            showToast('Arquivo removido.');
+        }
+
+        // WHATSAPP URL GENERATOR & FUNNEL SUBMIT
+        function gerarLinkWhatsApp(mensagem) {
+            const numero = config.whatsapp;
+            return `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+        }
+
+        function submitFunnelToWhatsApp() {
+            const consent = document.getElementById('privacy-consent').checked;
+            if (!consent) {
+                showToast('Por favor, aceite os termos de privacidade para continuar.', 'warning');
+                return;
+            }
+
+            const servico = getServiceById(funnelState.selectedServiceId);
+
+            let msg = `*NOVO AGENDAMENTO / CONSULTA - PET SPA*\n\n`;
+            msg += `🐾 *Serviço:* ${servico.nome}\n`;
+            msg += `🐶 *Pet:* ${funnelState.petName} (${funnelState.petType}${funnelState.petBreed ? ' - ' + funnelState.petBreed : ''})\n`;
+            msg += `👤 *Tutor:* ${funnelState.tutorName}\n`;
+            msg += `📱 *WhatsApp:* ${funnelState.tutorPhone}\n`;
+
+            if (funnelState.notes) {
+                msg += `📝 *Observações:* ${funnelState.notes}\n`;
+            }
+
+            if (funnelState.attachedFile) {
+                msg += `📎 *Anexo:* [Possuo foto/documento (${funnelState.attachedFile.name}) pronto para enviar aqui no chat]\n`;
+            }
+
+            msg += `\n_Enviado pelo Link na Bio do Instagram_`;
+
+            trackEvent('funnel_complete', {
+                service: servico.nome,
+                hasAttachment: !!funnelState.attachedFile
+            });
+
+            const link = gerarLinkWhatsApp(msg);
+            window.open(link, '_blank');
+        }
+
+        // TOAST NOTIFICATIONS
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const msgEl = document.getElementById('toast-message');
+
+            msgEl.textContent = message;
+
+            container.classList.remove('opacity-0', 'translate-y-2');
+            container.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                container.classList.remove('opacity-100', 'translate-y-0');
+                container.classList.add('opacity-0', 'translate-y-2');
+            }, 3000);
+        }
+
+        // EVENT TRACKING WRAPPER (GA4 / META PIXEL READY)
+        function trackEvent(eventName, eventData = {}) {
+            console.log(`[TRACKING EVENT]: ${eventName}`, eventData);
+
+            window.dispatchEvent(new CustomEvent('petspa_track', {
+                detail: { eventName, eventData }
+            }));
+
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', eventName, eventData);
+            }
+
+            if (typeof window.fbq === 'function') {
+                window.fbq('trackCustom', eventName, eventData);
+            }
+        }
+    </script>
+</body>
+</html>
